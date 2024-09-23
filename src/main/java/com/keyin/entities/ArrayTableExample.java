@@ -30,9 +30,11 @@ public class ArrayTableExample {
             for (int j = 0; j < array[i].length; j++) {
                 // Print each element with a tab for spacing
                 System.out.print(array[i][j] + "\t");
-            }
+             }
             // Move to the next line after printing the row
             System.out.println();
         }
     }
+
+
 }
