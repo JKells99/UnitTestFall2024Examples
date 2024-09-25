@@ -80,7 +80,45 @@ public class LinkedList {
 
     }
 
+    public void deleteNode(int location) {
+        if (head == null) { // Check if the list is empty
+            System.out.println("The linked list does not exist.");
+            return;
+        }
+
+        if (location == 0) { // Deleting the first node
+            head = head.next; // Move head to the next node
+            size--;
+            if (size == 0) { // If the list had only one node
+                tail = null;  // Set tail to null since it's now empty
+            }
+            return;
+        }
+
+        if (location >= size - 1) { // Deleting the last node
+            Node currentNode = head;
+            while (currentNode.next != tail) { // Find the second-to-last node
+                currentNode = currentNode.next;
+            }
+            currentNode.next = null; // Remove the last node
+            tail = currentNode;      // Update tail to the second-to-last node
+            size--;
+            return;
+        }
+
+        // Deleting a node in the middle
+        Node currentNode = head;
+        for (int i = 0; i < location - 1; i++) { // Find the node before the one to delete
+            currentNode = currentNode.next;
+        }
+        currentNode.next = currentNode.next.next; // Skip the node to delete
+        size--;
+    }
+
+}
+
+
     //Traverse a Linked List
     //Search for a Node
-}
+
 
