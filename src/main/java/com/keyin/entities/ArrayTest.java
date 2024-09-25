@@ -15,30 +15,21 @@ public class ArrayTest {
 
         LinkedList list = new LinkedList();
 
-        list.insertInLinkedList(3,0);
+        list.insertInLinkedList(1,0);
         list.insertInLinkedList(2,1);
         list.insertInLinkedList(3,2);
         list.insertInLinkedList(4,3);
+        list.insertInLinkedList(5,4);
+        list.insertInLinkedList(6,5);
 
         list.traverseLinkedList();
-
-        list.searchNode(3);
-
-
-        System.out.println(list.head.value);
-        System.out.println(list.tail.value);
-
-        java.util.LinkedList<Integer> linkedList = new java.util.LinkedList<Integer>();
-
-        linkedList.add(1);
-        linkedList.add(2);
-        linkedList.add(3);
-        linkedList.add(4);
-        linkedList.add(5);
+        list.searchNode(8);
+        list.deleteNode(2);
+        list.traverseLinkedList();
 
 
 
-        linkedList.forEach(System.out::print);
+
 
 
 
